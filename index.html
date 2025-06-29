@@ -99,6 +99,25 @@
     if (!comment) {
       return addComment.classList.add('error');
     }
+//    const oldHtml = commentsBlock.innerHTML;
+//    commentsBlock.innerHTML = oldHtml + `<li class="comment">
+//  <div class="comment-header">
+//    <div>${name}</div>
+//    <div>${initDate}</div>
+//  </div>
+//  <div class="comment-body">
+//    <div class="comment-text">
+//      ${comment}
+//    </div>
+//  </div>
+//  <div class="comment-footer">
+//    <div class="likes">
+//      <span class="likes-counter">0</span>
+//      <button class="like-button"></button>
+//    </div>
+//  </div>
+//</li>` ;
+//   Комментарий
     commentsBlock.insertAdjacentHTML('beforeend', `<li class="comment">
   <div class="comment-header">
     <div>${name}</div>
@@ -116,7 +135,7 @@
     </div>
   </div>
 </li>`);
-    
+//    Обнуление строк ввода
     addName.value = '';
     addComment.value = '';
 //    console.log(name, comment);
