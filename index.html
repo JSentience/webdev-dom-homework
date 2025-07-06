@@ -85,7 +85,7 @@
           slice(-2)} ${date.getHours().
           toString().
           padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-  //  console.log(initDate);
+
   
   //  Добавление комментария по клику
   addButton.addEventListener('click', () => {
@@ -99,46 +99,29 @@
     if (!comment) {
       return addComment.classList.add('error');
     }
-//    const oldHtml = commentsBlock.innerHTML;
-//    commentsBlock.innerHTML = oldHtml + `<li class="comment">
-//  <div class="comment-header">
-//    <div>${name}</div>
-//    <div>${initDate}</div>
-//  </div>
-//  <div class="comment-body">
-//    <div class="comment-text">
-//      ${comment}
-//    </div>
-//  </div>
-//  <div class="comment-footer">
-//    <div class="likes">
-//      <span class="likes-counter">0</span>
-//      <button class="like-button"></button>
-//    </div>
-//  </div>
-//</li>` ;
-//   Комментарий
-    commentsBlock.insertAdjacentHTML('beforeend', `<li class="comment">
-  <div class="comment-header">
-    <div>${name}</div>
-    <div>${initDate}</div>
-  </div>
-  <div class="comment-body">
-    <div class="comment-text">
-      ${comment}
-    </div>
-  </div>
-  <div class="comment-footer">
-    <div class="likes">
-      <span class="likes-counter">0</span>
-      <button class="like-button"></button>
-    </div>
-  </div>
-</li>`);
+   const oldHtml = commentsBlock.innerHTML;
+   commentsBlock.innerHTML = oldHtml + `<li class="comment">
+ <div class="comment-header">
+   <div>${name}</div>
+   <div>${initDate}</div>
+ </div>
+ <div class="comment-body">
+   <div class="comment-text">
+     ${comment}
+   </div>
+ </div>
+ <div class="comment-footer">
+   <div class="likes">
+     <span class="likes-counter">0</span>
+     <button class="like-button"></button>
+   </div>
+ </div>
+</li>` ;
+
 //    Обнуление строк ввода
     addName.value = '';
     addComment.value = '';
-//    console.log(name, comment);
+
     
   });
   
@@ -155,7 +138,6 @@
       
       likeButton.classList.add('-active-like');
 
-//      console.log(likesCounter);
     }
     
   });
