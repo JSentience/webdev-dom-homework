@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Добавил исправления">
+    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Добавлен рендеринг">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="dom2" />
+                    <option name="lastUsedInstant" value="1751805613" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="dev" />
                     <option name="lastUsedInstant" value="1751124588" />
                   </RecentBranch>
@@ -58,7 +63,7 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
+  &quot;customColor&quot;: &quot;000000a4&quot;,
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2z21lO6feWbLyTxTD7eVcGw7Viw" />
@@ -67,25 +72,36 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/nason/YandexDisk/HTML/HW-DOM",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.other",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ClientConfigCleanupMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nason/YandexDisk/HTML/HW-DOM&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -107,6 +123,20 @@
       <workItem from="1751227760503" duration="1458000" />
       <workItem from="1751229501977" duration="510000" />
       <workItem from="1751804246585" duration="401000" />
+      <workItem from="1751809645768" duration="302000" />
+      <workItem from="1751809967129" duration="100000" />
+      <workItem from="1751810084829" duration="456000" />
+      <workItem from="1751810554264" duration="156000" />
+      <workItem from="1751810719968" duration="2434000" />
+      <workItem from="1751870080531" duration="865000" />
+      <workItem from="1751871967773" duration="505000" />
+      <workItem from="1751872491130" duration="69000" />
+      <workItem from="1751872573221" duration="415000" />
+      <workItem from="1751873016377" duration="877000" />
+      <workItem from="1751873912598" duration="371000" />
+      <workItem from="1751878860195" duration="1584000" />
+      <workItem from="1751880472533" duration="114000" />
+      <workItem from="1752054170576" duration="361000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -140,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751229555584</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлен рендеринг, массив с комментариями, увеличение и уменьшение количества лайков по клику">
+      <option name="closed" value="true" />
+      <created>1751870603300</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751870603300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +199,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="Добавил код" />
     <MESSAGE value="Добавил исправления" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил исправления" />
+    <MESSAGE value="Добавлен рендеринг, массив с комментариями, увеличение и уменьшение количества лайков по клику" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен рендеринг, массив с комментариями, увеличение и уменьшение количества лайков по клику" />
   </component>
 </project>

@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Проект "Комменты"</title>
-    <meta charset="utf-8"/>
-    <link
-            rel="stylesheet"
-            href="styles.css"/>
-</head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-<div class="container">
-    <ul class="comments">
+  <body>
+    <div class="container">
+      <ul class="comments">
         <!--    <li class="comment">-->
 
         <!--      <div class="comment-header">-->
@@ -46,63 +44,79 @@
         <!--        </div>-->
         <!--      </div>-->
         <!--    </li>-->
-    </ul>
-    <div class="add-form">
+      </ul>
+      <div class="add-form">
         <input
-                type="text"
-                class="add-form-name"
-                placeholder="Введите ваше имя"
-                required
+          type="text"
+          class="add-form-name"
+          placeholder="Введите ваше имя"
+          required
         />
         <textarea
-                type="textarea"
-                class="add-form-text"
-                placeholder="Введите ваш комментарий"
-                rows="4"
-                required
+          type="textarea"
+          class="add-form-text"
+          placeholder="Введите ваш комментарий"
+          rows="4"
+          required
         ></textarea>
         <div class="add-form-row">
-            <button class="add-form-button">Написать</button>
+          <button class="add-form-button">Написать</button>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 
-<script>
-    'use strict';
+  <script>
+    "use strict";
     // Код писать здесь
-    const addName = document.querySelector('.add-form-name');
-    const addComment = document.querySelector('.add-form-text');
-    const addButton = document.querySelector('.add-form-button');
-    const commentsBlock = document.querySelector('.comments');
+    const addName = document.querySelector(".add-form-name");
+    const addComment = document.querySelector(".add-form-text");
+    const addButton = document.querySelector(".add-form-button");
+    const commentsBlock = document.querySelector(".comments");
 
     // Массив с комментариями
     const comments = [
-        {
-            name: "Глеб Фокин",
-            date: "12.02.22 12:18",
-            text: "Это будет первый комментарий на этой странице",
-            likes: 3,
-            isLiked: false
-        },
-        {
-            name: "Варвара Н.",
-            date: "13.02.22 19:22",
-            text: "Мне нравится как оформлена эта страница! ❤",
-            likes: 75,
-            isLiked: true
-        }
+      {
+        name: "Глеб Фокин",
+        date: "12.02.22 12:18",
+        text: "Это будет первый комментарий на этой странице",
+        likes: 3,
+        isLiked: false,
+      },
+      {
+        name: "Варвара Н.",
+        date: "13.02.22 19:22",
+        text: "Мне нравится как оформлена эта страница! ❤",
+        likes: 75,
+        isLiked: true,
+      },
     ];
+
     //  Получение даты
     const getFormattedDate = () => {
-        let date = new Date();
-        return `${date.getDate().toString().padStart(2, '0')}.${(date.getMonth() +
-            1).toString().padStart(2, '0')}.${date.getFullYear().toString().slice(-2)} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-    }
+      let date = new Date();
+      return `${date.getDate().toString().padStart(2, "0")}.${(
+        date.getMonth() + 1
+      )
+        .toString()
+        .padStart(2, "0")}.${date.getFullYear().toString().slice(-2)} ${date
+        .getHours()
+        .toString()
+        .padStart(2, "0")}:${date.getMinutes().toString().padStart(2, "0")}`;
+    };
+
+    // Функция для безопасного ввода от пользователя
+    // const secureHtml = (text) => {
+    //   const div = document.createElement("div");
+    //   div.textContent = text;
+    //   return div.innerHTML;
+    // };
 
     // Функция для рендеринга комментариев
     const renderComments = () => {
-        commentsBlock.innerHTML = comments.map((comment, index) => `
+      commentsBlock.innerHTML = comments
+        .map(
+          (comment, index) => `
       <li class="comment" data-index="${index}">
         <div class="comment-header">
           <div>${comment.name}</div>
@@ -116,64 +130,84 @@
         <div class="comment-footer">
           <div class="likes">
             <span class="likes-counter">${comment.likes}</span>
-            <button class="like-button ${comment.isLiked ? '-active-like' : ''}"></button>
+            <button class="like-button ${
+              comment.isLiked ? "-active-like" : ""
+            }"></button>
           </div>
         </div>
       </li>
-    `).join('');
+    `
+        )
+        .join("");
     };
     renderComments();
 
+    // Функция для создания комментария
+    const createComment = () => {
+      const name = addName.value
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .trim();
+      const comment = addComment.value
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .trim();
+      addName.classList.remove("error");
+      addComment.classList.remove("error");
+      if (!name) {
+        return addName.classList.add("error");
+      }
+      if (!comment) {
+        return addComment.classList.add("error");
+      }
 
-    //  Добавление комментария по клику
-    addButton.addEventListener('click', () => {
-        const name = addName.value.trim();
-        const comment = addComment.value.trim();
-        addName.classList.remove('error');
-        addComment.classList.remove('error');
-        if (!name) {
-            return addName.classList.add('error');
-        }
-        if (!comment) {
-            return addComment.classList.add('error');
-        }
+      comments.push({
+        name: name,
+        date: getFormattedDate(),
+        text: comment,
+        likes: 0,
+        isLiked: false,
+      });
+      renderComments();
 
-        comments.push(
-            {
-                name: name,
-                date: getFormattedDate(),
-                text: comment,
-                likes: 0,
-                isLiked: false
-            }
-        );
-        renderComments();
+      //    Обнуление строк ввода
+      addName.value = "";
+      addComment.value = "";
+    };
 
-        //    Обнуление строк ввода
-        addName.value = '';
-        addComment.value = '';
-    });
-
-
-    // Увеличение числа лайков по клику
-    commentsBlock.addEventListener('click', (event) => {
-        if (!event.target.classList.contains('like-button')) return;
-
-        const commentElement = event.target.closest('.comment');
+    // Добавление лайков
+    const clickComment = (event) => {
+      if (event.target.classList.contains("like-button")) {
+        const commentElement = event.target.closest(".comment");
         const index = +commentElement.dataset.index;
         const comment = comments[index];
 
         if (comment.isLiked) {
-            comment.likes--;
+          comment.likes--;
         } else {
-            comment.likes++;
+          comment.likes++;
         }
 
         comment.isLiked = !comment.isLiked;
-        renderComments();
-    });
+      } else {
+        const commentElement = event.target.closest(".comment");
+        if (commentElement) {
+          const index = +commentElement.dataset.index;
+          const comment = comments[index];
+          addComment.value = `> ${comment.name} : ${
+            comment.text
+          }<`;
+          addComment.focus();
+        }
+      }
+      renderComments();
+    };
 
+    //  Добавление комментария по клику
+    addButton.addEventListener("click", createComment);
+    // Увеличение числа лайков по клику
+    commentsBlock.addEventListener("click", clickComment);
 
-    console.log('It works!');
-</script>
+    console.log("It works!");
+  </script>
 </html>
