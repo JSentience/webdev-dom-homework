@@ -74,6 +74,7 @@
     const addButton = document.querySelector(".add-form-button");
     const commentsBlock = document.querySelector(".comments");
 
+
     // Массив с комментариями
     const comments = [
       {
@@ -194,9 +195,7 @@
         if (commentElement) {
           const index = +commentElement.dataset.index;
           const comment = comments[index];
-          addComment.value = `> ${comment.name} : ${
-            comment.text
-          }<`;
+          addComment.value = `> ${comment.name} : ${comment.text}`;
           addComment.focus();
         }
       }
