@@ -74,7 +74,6 @@
     const addButton = document.querySelector(".add-form-button");
     const commentsBlock = document.querySelector(".comments");
 
-
     // Массив с комментариями
     const comments = [
       {
@@ -118,26 +117,26 @@
       commentsBlock.innerHTML = comments
         .map(
           (comment, index) => `
-      <li class="comment" data-index="${index}">
-        <div class="comment-header">
-          <div>${comment.name}</div>
-          <div>${comment.date}</div>
-        </div>
-        <div class="comment-body">
-          <div class="comment-text">
-            ${comment.text}
+        <li class="comment" data-index="${index}">
+          <div class="comment-header">
+            <div>${comment.name}</div>
+            <div>${comment.date}</div>
           </div>
-        </div>
-        <div class="comment-footer">
-          <div class="likes">
-            <span class="likes-counter">${comment.likes}</span>
-            <button class="like-button ${
-              comment.isLiked ? "-active-like" : ""
-            }"></button>
+          <div class="comment-body">
+            <div class="comment-text">
+              ${comment.text}
+            </div>
           </div>
-        </div>
-      </li>
-    `
+          <div class="comment-footer">
+            <div class="likes">
+              <span class="likes-counter">${comment.likes}</span>
+              <button class="like-button ${
+                comment.isLiked ? "-active-like" : ""
+              }"></button>
+            </div>
+          </div>
+        </li>
+      `
         )
         .join("");
     };
@@ -177,12 +176,11 @@
     };
 
     // Добавление лайков
-    const clickComment = (event) => {
+    const addLike = (event) => {
       if (event.target.classList.contains("like-button")) {
         const commentElement = event.target.closest(".comment");
         const index = +commentElement.dataset.index;
         const comment = comments[index];
-
         if (comment.isLiked) {
           comment.likes--;
         } else {
@@ -190,22 +188,26 @@
         }
 
         comment.isLiked = !comment.isLiked;
-      } else {
-        const commentElement = event.target.closest(".comment");
-        if (commentElement) {
-          const index = +commentElement.dataset.index;
-          const comment = comments[index];
-          addComment.value = `> ${comment.name} : ${comment.text}`;
-          addComment.focus();
-        }
       }
+
       renderComments();
+    };
+
+    const replyToComment = (event) => {
+      const commentElement = event.target.closest(".comment");
+      if (commentElement) {
+        const index = +commentElement.dataset.index;
+        const comment = comments[index];
+        addComment.value = `> ${comment.name} : ${comment.text}`;
+        addComment.focus();
+      }
     };
 
     //  Добавление комментария по клику
     addButton.addEventListener("click", createComment);
     // Увеличение числа лайков по клику
-    commentsBlock.addEventListener("click", clickComment);
+    commentsBlock.addEventListener("click", replyToComment);
+    commentsBlock.addEventListener("click", addLike);
 
     console.log("It works!");
   </script>
