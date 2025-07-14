@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Добавлен рендеринг">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/addlikes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/createComments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/replyComment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HW-DOM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HW-DOM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,10 +25,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,6 +47,25 @@
   }
 }</component>
   <component name="GitToolBoxStore">
+    <option name="branchesCleanupHistory">
+      <BranchesCleanupHistory>
+        <option name="history">
+          <list>
+            <BranchCleanupEntry>
+              <option name="deletions">
+                <list>
+                  <BranchDeletion>
+                    <option name="hash" value="103893f50ae9c5ae774e59c8f3cabdb74932db9e" />
+                    <option name="name" value="dom2" />
+                  </BranchDeletion>
+                </list>
+              </option>
+              <option name="timestamp" value="1752505192444" />
+            </BranchCleanupEntry>
+          </list>
+        </option>
+      </BranchesCleanupHistory>
+    </option>
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -62,6 +100,9 @@
     &quot;accountId&quot;: &quot;c7ce92e2-98c0-4ade-8adf-d80f309a32cd&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;000000a4&quot;,
   &quot;associatedIndex&quot;: 2
@@ -75,6 +116,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.main.js.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
     "RunOnceActivity.ClientConfigCleanupMigration": "true",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
@@ -94,14 +136,31 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nason/YandexDisk/HTML/HW-DOM",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "C:\\Users\\nason\\AppData\\Roaming\\npm\\node_modules\\standard",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\nason\\YandexDisk\\HTML\\HW-DOM\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "typescript.add.unambiguous.imports.on.the.fly": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/main.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -138,6 +197,24 @@
       <workItem from="1751880472533" duration="114000" />
       <workItem from="1752054170576" duration="361000" />
       <workItem from="1752056038143" duration="438000" />
+      <workItem from="1752238001816" duration="616000" />
+      <workItem from="1752238647433" duration="2074000" />
+      <workItem from="1752240834103" duration="104000" />
+      <workItem from="1752241174356" duration="493000" />
+      <workItem from="1752242203775" duration="1534000" />
+      <workItem from="1752244792091" duration="675000" />
+      <workItem from="1752254473910" duration="365000" />
+      <workItem from="1752254857613" duration="311000" />
+      <workItem from="1752255180599" duration="229000" />
+      <workItem from="1752255455871" duration="219000" />
+      <workItem from="1752301350697" duration="156000" />
+      <workItem from="1752408508075" duration="4981000" />
+      <workItem from="1752429011155" duration="3609000" />
+      <workItem from="1752433261788" duration="1101000" />
+      <workItem from="1752434815770" duration="3048000" />
+      <workItem from="1752466291521" duration="1280000" />
+      <workItem from="1752485017834" duration="3900000" />
+      <workItem from="1752503367300" duration="3106000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
