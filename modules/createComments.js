@@ -1,7 +1,7 @@
 import { comments } from './comments.js';
 import { getFormattedDate } from './utils.js';
 import { renderComments } from './renderComments.js';
-import { addComment, addName } from '../main.js';
+import { addComment, addName } from './selectors.js';
 
 export const createComment = () => {
 	const name = addName.value.trim();

@@ -1,5 +1,5 @@
 import { comments } from './comments.js';
-import { addComment } from '../main.js';
+import { addComment } from './selectors.js';
 
 export const replyToComment = event => {
 	const commentElement = event.target.closest('.comment');

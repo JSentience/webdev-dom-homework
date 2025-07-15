@@ -1,6 +1,6 @@
 import { comments } from './comments.js';
 import { secureHtml } from './utils.js';
-import { commentsBlock } from '../main.js';
+import { commentsBlock } from './selectors.js';
 
 export const renderComments = () => {
 	commentsBlock.innerHTML = comments
