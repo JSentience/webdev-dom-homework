@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Проект разбит на модули. Добавлен prettier и eslint">
-      <change afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="В проект добавлена возможность запоса и отправки данных на сервер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/createComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/createComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/renderComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +222,7 @@
       <workItem from="1752995299537" duration="1723000" />
       <workItem from="1752997170180" duration="3174000" />
       <workItem from="1753000382840" duration="1030000" />
-      <workItem from="1753001693004" duration="1855000" />
+      <workItem from="1753001693004" duration="3836000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -285,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752574062687</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="В проект добавлена возможность запоса и отправки данных на сервер">
+      <option name="closed" value="true" />
+      <created>1753003896865</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753003896865</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +311,7 @@
     <MESSAGE value="Добавил исправления" />
     <MESSAGE value="Добавлен рендеринг, массив с комментариями, увеличение и уменьшение количества лайков по клику" />
     <MESSAGE value="Проект разбит на модули. Добавлен prettier и eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проект разбит на модули. Добавлен prettier и eslint" />
+    <MESSAGE value="В проект добавлена возможность запоса и отправки данных на сервер" />
+    <option name="LAST_COMMIT_MESSAGE" value="В проект добавлена возможность запоса и отправки данных на сервер" />
   </component>
 </project>

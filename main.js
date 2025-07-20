@@ -5,6 +5,7 @@ import { addLike } from './modules/addLikes.js';
 import { addButton, commentsBlock } from './modules/selectors.js';
 import { updateComments } from './modules/comments.js';
 
+// Получаем комментарии с сервера
 fetch('https://wedev-api.sky.pro/api/v1/sergey-nasonov/comments', {
 	method: 'GET',
 })
@@ -21,7 +22,6 @@ fetch('https://wedev-api.sky.pro/api/v1/sergey-nasonov/comments', {
 	.catch(error => {
 		alert('Ошибка загрузки комментариев: ' + error.message);
 	});
-
 
 addButton.addEventListener('click', createComment);
 commentsBlock.addEventListener('click', event => {

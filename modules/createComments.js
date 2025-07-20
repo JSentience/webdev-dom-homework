@@ -10,12 +10,12 @@ export const createComment = () => {
 	addComment.classList.remove('error');
 	if (!name) return addName.classList.add('error');
 	if (!text) return addComment.classList.add('error');
-
+	//Создаем объект с данными нового комментария
 	const newCommentData = {
 		name: name,
 		text: text,
 	};
-
+	// Передаем комментарий на сервер
 	fetch('https://wedev-api.sky.pro/api/v1/sergey-nasonov/comments', {
 		method: 'POST',
 		body: JSON.stringify(newCommentData),
@@ -28,6 +28,7 @@ export const createComment = () => {
 		})
 		.then(response => response.json())
 		.then(data => {
+			// Преобразуем name в поле author.name
 			const normalizedComments = data.comments.map(comment => ({
 				...comment,
 				name: comment.author.name,
