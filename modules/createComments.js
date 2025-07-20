@@ -1,30 +1,44 @@
-import { comments } from './comments.js';
-import { getFormattedDate } from './utils.js';
+import { updateComments } from './comments.js';
 import { renderComments } from './renderComments.js';
 import { addComment, addName } from './selectors.js';
 
 export const createComment = () => {
 	const name = addName.value.trim();
-	const comment = addComment.value.trim();
+	const text = addComment.value.trim();
+
 	addName.classList.remove('error');
 	addComment.classList.remove('error');
-	if (!name) {
-		return addName.classList.add('error');
-	}
-	if (!comment) {
-		return addComment.classList.add('error');
-	}
+	if (!name) return addName.classList.add('error');
+	if (!text) return addComment.classList.add('error');
 
-	comments.push({
+	const newCommentData = {
 		name: name,
-		date: getFormattedDate(),
-		text: comment,
-		likes: 0,
-		isLiked: false,
-	});
-	renderComments();
+		text: text,
+	};
 
-	//    Обнуление строк ввода
-	addName.value = '';
-	addComment.value = '';
+	fetch('https://wedev-api.sky.pro/api/v1/sergey-nasonov/comments', {
+		method: 'POST',
+		body: JSON.stringify(newCommentData),
+	})
+		.then(response => {
+			return response.json();
+		})
+		.then(() => {
+			return fetch('https://wedev-api.sky.pro/api/v1/sergey-nasonov/comments');
+		})
+		.then(response => response.json())
+		.then(data => {
+			const normalizedComments = data.comments.map(comment => ({
+				...comment,
+				name: comment.author.name,
+			}));
+			updateComments(normalizedComments);
+			renderComments();
+			// Очищаем поля ввода
+			addName.value = '';
+			addComment.value = '';
+		})
+		.catch(error => {
+			alert('Ошибка при отправке комментария ' + error.message);
+		});
 };

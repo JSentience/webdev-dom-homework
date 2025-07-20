@@ -1,5 +1,5 @@
 .prettierrc.json
-eslint.config.mjs
+../vite-app/eslint.config.mjs
 /node_modules
 /.idea
 /.vscode
