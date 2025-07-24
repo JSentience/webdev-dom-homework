@@ -1,5 +1,5 @@
 import { comments } from './comments.js';
-import { secureHtml } from './utils.js';
+import { getFormattedDate, secureHtml } from './utils.js';
 import { commentsBlock } from './selectors.js';
 
 export const renderComments = () => {
@@ -9,7 +9,7 @@ export const renderComments = () => {
         <li class="comment" data-index="${index}">
           <div class="comment-header">
             <div>${secureHtml(comment.name)}</div>
-            <div>${comment.date}</div>
+            <div>${getFormattedDate(comment.date)}</div>
           </div>
           <div class="comment-body">
             <div class="comment-text">
