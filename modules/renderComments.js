@@ -1,6 +1,6 @@
 import { comments } from './comments.js';
-import { getFormattedDate, secureHtml } from './utils.js';
 import { commentsBlock } from './selectors.js';
+import { getFormattedDate, secureHtml } from './utils.js';
 
 export const renderComments = () => {
 	commentsBlock.innerHTML = comments
