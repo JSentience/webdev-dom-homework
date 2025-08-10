@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Добавил комментарии">
+    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="сделано почти все дз">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/addlikes.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/addlikes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/createComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/createComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/renderComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/getComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getComments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +230,8 @@
       <workItem from="1754137884797" duration="198000" />
       <workItem from="1754576389488" duration="468000" />
       <workItem from="1754577098777" duration="3171000" />
-      <workItem from="1754648008093" duration="7196000" />
+      <workItem from="1754648008093" duration="7285000" />
+      <workItem from="1754807848001" duration="2069000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -308,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753015329674</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="сделано почти все дз">
+      <option name="closed" value="true" />
+      <created>1754663959707</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754663959708</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +338,7 @@
     <MESSAGE value="Проект разбит на модули. Добавлен prettier и eslint" />
     <MESSAGE value="В проект добавлена возможность запоса и отправки данных на сервер" />
     <MESSAGE value="Добавил комментарии" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил комментарии" />
+    <MESSAGE value="сделано почти все дз" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделано почти все дз" />
   </component>
 </project>

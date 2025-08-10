@@ -21,7 +21,7 @@ export const fetchComments = (showLoader = false) => {
 				...comment,
 				name: comment.author.name,
 			}));
-
+			
 			updateComments(normalizedComments);
 			renderComments();
 

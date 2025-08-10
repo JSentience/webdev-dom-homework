@@ -142,6 +142,23 @@ body {
 .error::placeholder {
 	color: red;
 }
+.comment-load__text{
+    animation: waviy 0.7s infinite;
+    animation-delay: 0.1s;
+}
+.loader-add-comment__text{
+    animation: waviy 0.7s infinite;
+    animation-delay: 0.1s;
+}
+@keyframes waviy {
+    0%,40%,100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-10px)
+    }
+}
+
 .hidden {
     display: none!important;
 }
@@ -158,7 +175,7 @@ body {
     border: 4px solid #ccc;
     border-top: 4px solid #bcec30;
     animation: spin 2s linear infinite;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
