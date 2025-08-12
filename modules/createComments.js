@@ -23,7 +23,7 @@ const sendComment = data => {
 		if (!response.ok) {
 			const errorMessage =
 				response.status === 400
-					? 'Короткий текст'
+					? 'Текст должен содержать более 3 символов'
 					: response.status === 500
 						? 'Сервер не доступен'
 						: ' Ошибка сервера ';
