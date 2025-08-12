@@ -10,7 +10,7 @@ export const fetchComments = (showLoader = false) => {
 		method: 'GET',
 	})
 		.then(response => {
-			if (!response.ok) {
+			if (response.status === 400) {
 				throw new Error(`Ошибка ${response.status}: ${response.statusText}`);
 			}
 			return response.json();
@@ -21,7 +21,7 @@ export const fetchComments = (showLoader = false) => {
 				...comment,
 				name: comment.author.name,
 			}));
-			
+
 			updateComments(normalizedComments);
 			renderComments();
 
