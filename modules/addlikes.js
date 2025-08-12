@@ -6,13 +6,32 @@ export const addLike = event => {
 		const commentElement = event.target.closest('.comment');
 		const index = +commentElement.dataset.index;
 		const comment = comments[index];
-		if (comment.isLiked) {
-			comment.likes--;
-		} else {
-			comment.likes++;
-		}
 
-		comment.isLiked = !comment.isLiked;
+		const likeButton = event.target;
+		likeButton.classList.add('loading');
+		likeButton.disabled = true;
+
+		new Promise(resolve => {
+			setTimeout(() => {
+				if (comment.isLiked) {
+					comment.likes--;
+				} else {
+					comment.likes++;
+				}
+
+				comment.isLiked = !comment.isLiked;
+				resolve();
+			}, 3000);
+		})
+			.then(() => {
+				renderComments();
+			})
+			.catch(error => {
+				console.error('Ошибка при изменении лайка', error);
+			})
+			.finally(() => {
+				likeButton.classList.remove('loading');
+				likeButton.disabled = false;
+			});
 	}
-	renderComments();
 };
