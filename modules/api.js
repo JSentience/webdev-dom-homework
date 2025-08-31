@@ -1,7 +1,5 @@
-
 import { updateComments } from './comments.js';
 import { renderComments } from './renderComments.js';
-import { commentPageLoad } from './selectors.js';
 
 export let token = '';
 export const setToken = newToken => {
@@ -15,6 +13,7 @@ export const setName = newName => {
 export const baseUrl = 'https://wedev-api.sky.pro/api/v2/:sergey-nasonov';
 export const authUrl = 'https://wedev-api.sky.pro/api/user';
 export const fetchComments = (showLoader = false) => {
+	const commentPageLoad = document.querySelector('.comment-load');
 	if (showLoader) {
 		commentPageLoad.classList.remove('hidden');
 	}
@@ -95,7 +94,6 @@ const toggleLoader = isLoad => {
 export const createComment = () => {
 	const addName = document.querySelector('.add-form-name');
 	const addComment = document.querySelector('.add-form-text');
-	
 
 	const name = addName.value.trim();
 	const text = addComment.value.trim();
@@ -131,9 +129,9 @@ export const login = (login, password) => {
 		body: JSON.stringify({ login: login, password: password }),
 	});
 };
-export const registration = (login, name, password) => {
+export const registration = (name, login, password) => {
 	return fetch(authUrl, {
 		method: 'POST',
-		body: JSON.stringify({ password: password, name: name, login: login }),
+		body: JSON.stringify({ name: name, login: login, password: password }),
 	});
 };

@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/renderLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/renderRegistrration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/createComments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/getComments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/renderComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/renderLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/replyComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/replyComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/selectors.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +69,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1756637429" />
+                    <option name="lastUsedInstant" value="1756643791" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1751124587" />
+                    <option name="lastUsedInstant" value="1756643767" />
                   </RecentBranch>
                 </list>
               </option>
@@ -159,6 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.main.js" />
         <item itemvalue="Node.js.main.js" />
@@ -254,6 +253,7 @@
       <workItem from="1756637539909" duration="115000" />
       <workItem from="1756637727699" duration="115000" />
       <workItem from="1756637873763" duration="131000" />
+      <workItem from="1756643709043" duration="1711000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

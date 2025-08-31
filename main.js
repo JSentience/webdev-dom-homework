@@ -1,7 +1,6 @@
 import { addLike } from './modules/addLikes.js';
 import { createComment, fetchComments, token } from './modules/api.js';
 import { replyToComment } from './modules/replyComment.js';
-import { container } from './modules/selectors.js';
 import { updateComments } from './modules/comments.js';
 import { renderComments } from './modules/renderComments.js';
 import { renderLogin } from './modules/renderLogin.js';
@@ -15,6 +14,7 @@ export const fetchAndRenderComments = () => {
 };
 fetchAndRenderComments();
 
+const container = document.querySelector('.container');
 container.addEventListener('click', event => {
 	if (token) {
 		if (event.target.classList.contains('like-button')) {

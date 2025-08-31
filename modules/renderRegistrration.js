@@ -1,12 +1,18 @@
-import { login, setName, setToken } from './api.js';
+import { registration, setName, setToken } from './api.js';
 import { fetchAndRenderComments } from '../main.js';
-import { renderRegistration } from './renderRegistrration.js';
+import { renderLogin } from './renderLogin.js';
 
-export const renderLogin = () => {
+export const renderRegistration = () => {
 	const container = document.querySelector('.container');
 	const loginHtml = `
 	<div class="add-form">
 	<h1>Форма входа</h1>
+	<input
+type="text"
+class="add-form-name-login"
+placeholder="Введите имя"
+id="name"
+required />
 <input
 type="text"
 class="add-form-name-login"
@@ -21,8 +27,8 @@ id="password"
 required />
 <fieldset class="add-form-registry">
 <button class="add-form-button-main"
-type="submit" >Войти</button>
-<button class="add-form-button-registry">Зарегистрироваться</button>
+type="submit" >Зарегистрироваться</button>
+<button class="add-form-button-registry">Войти</button>
 </div>
 </fieldset>
 
@@ -33,15 +39,15 @@ type="submit" >Войти</button>
 	document
 		.querySelector('.add-form-button-registry')
 		.addEventListener('click', () => {
-			renderRegistration();
+			renderLogin();
 		});
-
-	const loginElement = document.getElementById('login');
-	const passwordElement = document.getElementById('password');
+	const nameElement = document.querySelector('#name');
+	const loginElement = document.querySelector('#login');
+	const passwordElement = document.querySelector('#password');
 	const submitButton = document.querySelector('.add-form-button-main');
 
 	submitButton.addEventListener('click', () => {
-		login(loginElement.value, passwordElement.value)
+		registration(nameElement.value, loginElement.value, passwordElement.value)
 			.then(res => {
 				return res.json();
 			})

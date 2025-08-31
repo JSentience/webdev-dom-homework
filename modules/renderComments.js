@@ -1,9 +1,9 @@
 import { comments } from './comments.js';
-import { container } from './selectors.js';
 import { token } from './api.js';
 import { getFormattedDate, secureHtml } from './utils.js';
 
 export const renderComments = () => {
+	const container = document.querySelector('.container');
 	const commentsHtml = comments
 		.map(
 			(comment, index) => `
