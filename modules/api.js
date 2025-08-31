@@ -4,6 +4,7 @@ import { renderComments } from './renderComments.js';
 export let token = '';
 export const setToken = newToken => {
 	token = newToken;
+	localStorage.setItem('token', newToken);
 };
 
 export let name = '';
