@@ -14,7 +14,7 @@ export const baseUrl = 'https://wedev-api.sky.pro/api/v2/:sergey-nasonov';
 export const authUrl = 'https://wedev-api.sky.pro/api/user';
 export const fetchComments = (showLoader = false) => {
 	const commentPageLoad = document.querySelector('.comment-load');
-	if (showLoader) {
+	if (showLoader && commentPageLoad) {
 		commentPageLoad.classList.remove('hidden');
 	}
 	return fetch(baseUrl + '/comments', {
@@ -43,7 +43,7 @@ export const fetchComments = (showLoader = false) => {
 			throw error;
 		})
 		.finally(() => {
-			if (showLoader) {
+			if (showLoader && commentPageLoad) {
 				commentPageLoad.classList.add('hidden');
 			}
 		});
@@ -101,7 +101,7 @@ export const createComment = () => {
 	if (!validateComment(name, text)) return;
 
 	//Создаем объект с данными нового комментария
-	const newCommentData = { name, text, forceError: true };
+	const newCommentData = { name, text, forceError: false };
 	toggleLoader(true);
 
 	sendComment(newCommentData)

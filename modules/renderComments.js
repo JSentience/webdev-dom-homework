@@ -1,5 +1,5 @@
 import { comments } from './comments.js';
-import { token } from './api.js';
+import { name, token } from './api.js';
 import { getFormattedDate, secureHtml } from './utils.js';
 
 export const renderComments = () => {
@@ -30,7 +30,7 @@ export const renderComments = () => {
 		)
 		.join('');
 
-	const addCommentshtml = `
+	const addCommentsHtml = `
 	<div class="loader-add-comment hidden">
                 <h2 class="loader-add-comment__text">Комментарий добавляется</h2>
             </div>
@@ -40,6 +40,8 @@ export const renderComments = () => {
 type="text"
 class="add-form-name"
 placeholder="Введите ваше имя"
+value="${name}"
+readonly
 required />
 <textarea
 type="textarea"
@@ -57,7 +59,7 @@ required></textarea>
 	`;
 	const baseHtml = `
 	<ul class="comments">${commentsHtml}</ul>
-	${token ? addCommentshtml : linkToLoginText}
+	${token ? addCommentsHtml : linkToLoginText}
 `;
 	container.innerHTML = baseHtml;
 };
