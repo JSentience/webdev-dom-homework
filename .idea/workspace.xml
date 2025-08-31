@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Добавлена обработка ошибок и реализована возможность перезапроса при ошибке 500. createComments разбита на &#10;отдельные функции для снижения сложности.">
+    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/modules/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/renderLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/createComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/createComments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/createComments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/getComments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/renderComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,12 +71,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="dom2" />
-                    <option name="lastUsedInstant" value="1751805613" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1751124588" />
+                    <option name="lastUsedInstant" value="1756637429" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -88,6 +93,9 @@
     &quot;accountId&quot;: &quot;c7ce92e2-98c0-4ade-8adf-d80f309a32cd&quot;
   }
 }</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
     <option name="selectedTabId" value="CurrentFile" />
@@ -118,6 +126,7 @@
     &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
@@ -151,13 +160,15 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.main.js" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-WS-252.23892.411" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-WS-252.25557.126" />
       </set>
     </attachedChunks>
   </component>
@@ -233,6 +244,16 @@
       <workItem from="1754919554352" duration="17000" />
       <workItem from="1754923569347" duration="4762000" />
       <workItem from="1755030133931" duration="6602000" />
+      <workItem from="1756479816514" duration="201000" />
+      <workItem from="1756484858295" duration="1278000" />
+      <workItem from="1756547341603" duration="5425000" />
+      <workItem from="1756625767238" duration="3244000" />
+      <workItem from="1756636239548" duration="47000" />
+      <workItem from="1756636850293" duration="25000" />
+      <workItem from="1756636898583" duration="622000" />
+      <workItem from="1756637539909" duration="115000" />
+      <workItem from="1756637727699" duration="115000" />
+      <workItem from="1756637873763" duration="131000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />

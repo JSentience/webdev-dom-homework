@@ -1,18 +1,36 @@
 import { addLike } from './modules/addLikes.js';
-import { createComment } from './modules/createComments.js';
-import { fetchComments } from './modules/getComments.js';
+import { createComment, fetchComments, token } from './modules/api.js';
 import { replyToComment } from './modules/replyComment.js';
-import { addButton, commentsBlock } from './modules/selectors.js';
+import { container } from './modules/selectors.js';
+import { updateComments } from './modules/comments.js';
+import { renderComments } from './modules/renderComments.js';
+import { renderLogin } from './modules/renderLogin.js';
 
 // Получаем комментарии с сервера
+export const fetchAndRenderComments = () => {
+	fetchComments(true).then(comments => {
+		updateComments(comments);
+		renderComments();
+	});
+};
+fetchAndRenderComments();
 
-fetchComments(true);
-
-addButton.addEventListener('click', createComment);
-commentsBlock.addEventListener('click', event => {
-	if (event.target.classList.contains('like-button')) {
-		addLike(event);
-	} else if (event.target.closest('.comment')) {
-		replyToComment(event);
+container.addEventListener('click', event => {
+	if (token) {
+		if (event.target.classList.contains('like-button')) {
+			addLike(event);
+			return;
+		}
+		if (event.target.classList.contains('add-form-button')) {
+			createComment();
+			return;
+		}
+		if (event.target.closest('.comment')) {
+			replyToComment(event);
+		}
+	} else {
+		if (event.target.classList.contains('link-login')) {
+			renderLogin();
+		}
 	}
 });
