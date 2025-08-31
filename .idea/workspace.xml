@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="восстановил изменения">
+    <list default="true" id="a75814a3-d332-48d0-b821-f66586ee9305" name="Changes" comment="Готово основное задание">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/renderComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/renderComments.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,6 +253,9 @@
       <workItem from="1756646140788" duration="18000" />
       <workItem from="1756646175834" duration="55000" />
       <workItem from="1756646245557" duration="725000" />
+      <workItem from="1756647910116" duration="60000" />
+      <workItem from="1756647987835" duration="107000" />
+      <workItem from="1756648118145" duration="451000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -358,7 +361,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756645657746</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Готово основное задание">
+      <option name="closed" value="true" />
+      <created>1756647520620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1756647520620</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Готово основное задание">
+      <option name="closed" value="true" />
+      <created>1756647708112</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1756647708112</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,6 +406,7 @@
     <MESSAGE value="Добавил анимации лоадеров" />
     <MESSAGE value="Добавлена обработка ошибок и реализована возможность перезапроса при ошибке 500. createComments разбита на &#10;отдельные функции для снижения сложности." />
     <MESSAGE value="восстановил изменения" />
-    <option name="LAST_COMMIT_MESSAGE" value="восстановил изменения" />
+    <MESSAGE value="Готово основное задание" />
+    <option name="LAST_COMMIT_MESSAGE" value="Готово основное задание" />
   </component>
 </project>

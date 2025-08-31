@@ -10,7 +10,18 @@ export const setToken = newToken => {
 export let name = '';
 export const setName = newName => {
 	name = newName;
+	localStorage.setItem('name', newName);
 };
+
+export const authFromLocalStorage = () => {
+	const savedToken = localStorage.getItem('token');
+	const savedName = localStorage.getItem('name');
+	if (savedToken && savedName) {
+		token = savedToken;
+		name = savedName;
+	}
+};
+
 export const baseUrl = 'https://wedev-api.sky.pro/api/v2/:sergey-nasonov';
 export const authUrl = 'https://wedev-api.sky.pro/api/user';
 export const fetchComments = (showLoader = false) => {

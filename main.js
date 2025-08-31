@@ -1,10 +1,16 @@
 import { addLike } from './modules/addLikes.js';
-import { createComment, fetchComments, token } from './modules/api.js';
+import {
+	authFromLocalStorage,
+	createComment,
+	fetchComments,
+	token,
+} from './modules/api.js';
 import { replyToComment } from './modules/replyComment.js';
 import { updateComments } from './modules/comments.js';
 import { renderComments } from './modules/renderComments.js';
 import { renderLogin } from './modules/renderLogin.js';
 
+authFromLocalStorage();
 // Получаем комментарии с сервера
 export const fetchAndRenderComments = () => {
 	fetchComments(true).then(comments => {
