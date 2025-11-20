@@ -99,6 +99,42 @@ body {
 	margin-top: 48px;
 	display: flex;
 	flex-direction: column;
+	gap: 24px;
+}
+.add-form-registry{
+    border: none;
+	display: flex;
+	gap: 24px;
+    flex-direction: column;
+
+}
+.add-form-button-main{
+    font-size: 16px;
+    font-family: Helvetica;
+    border-radius: 8px;
+    background-color: #bcec30;
+    border: none;
+    margin-top: 5px;
+	padding: 15px;
+	resize: none;
+    cursor: pointer;
+}
+.add-form-button-registry{
+    font-size: 16px;
+    font-family: Helvetica;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+
+}
+.add-form-name-login{
+    font-size: 16px;
+    font-family: Helvetica;
+    border-radius: 8px;
+    border: none;
+    padding: 11px 22px;
 }
 
 .add-form-name,
@@ -107,6 +143,7 @@ body {
 	font-family: Helvetica;
 	border-radius: 8px;
 	border: none;
+
 }
 
 .add-form-name {
@@ -157,6 +194,10 @@ body {
     20% {
         transform: translateY(-10px)
     }
+}
+.link-login {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .hidden {
